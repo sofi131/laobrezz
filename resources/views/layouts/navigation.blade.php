@@ -16,7 +16,13 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                     <x-nav-link :href="route('permission.index')" :active="request()->routeIs('permission.index')">
-                        {{ __('Permission') }}
+                        {{ __('Permissions') }}
+                    </x-nav-link>
+                     <x-nav-link :href="route('role.index')" :active="request()->routeIs('role.index')">
+                         {{ __('Roles') }}
+                     </x-nav-link>
+                    <x-nav-link :href="route('user.index')" :active="request()->routeIs('user.index')">
+                        {{ __('Users') }}
                     </x-nav-link>
                 </div>
             </div>
@@ -38,6 +44,9 @@
 
                     <x-slot name="content">
                         <!-- Authentication -->
+                        <x-dropdown-link :href="route('admin.account.info')" :active="request()->routeIs('admin.account.info')">
+                         {{ __('My Account') }}
+                        </x-dropdown-link>
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
 
@@ -70,7 +79,13 @@
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('permission.index')" :active="request()->routeIs('permission.index')">
-                {{ __('Permission') }}
+                {{ __('Permissions') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('role.index')" :active="request()->routeIs('role.index')">
+                {{ __('Roles') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('user.index')" :active="request()->routeIs('user.index')">
+                {{ __('Users') }}
             </x-responsive-nav-link>
         </div>
 
@@ -82,6 +97,10 @@
             </div>
 
             <div class="mt-3 space-y-1">
+
+                <x-responsive-nav-link :href="route('admin.account.info')" :active="request()->routeIs('admin.account.info')">
+                {{ __('My Account') }}
+                </x-responsive-nav-link>
                 <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf

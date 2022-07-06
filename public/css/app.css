@@ -701,6 +701,9 @@ select {
 .z-50 {
   z-index: 50;
 }
+.col-span-4 {
+  grid-column: span 4 / span 4;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -895,6 +898,9 @@ select {
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
 .flex-col {
   flex-direction: column;
 }
@@ -910,6 +916,9 @@ select {
 .justify-between {
   justify-content: space-between;
 }
+.gap-4 {
+  gap: 1rem;
+}
 .space-x-8 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(2rem * var(--tw-space-x-reverse));
@@ -922,6 +931,9 @@ select {
 }
 .overflow-hidden {
   overflow: hidden;
+}
+.overflow-x-auto {
+  overflow-x: auto;
 }
 .rounded-md {
   border-radius: 0.375rem;
@@ -1077,6 +1089,10 @@ select {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
 }
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
 .pt-8 {
   padding-top: 2rem;
 }
@@ -1109,6 +1125,9 @@ select {
 }
 .pt-6 {
   padding-top: 1.5rem;
+}
+.pl-2 {
+  padding-left: 0.5rem;
 }
 .text-left {
   text-align: left;
@@ -1540,6 +1559,10 @@ select {
 }
 @media (min-width: 640px) {
 
+  .sm\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
   .sm\:-my-px {
     margin-top: -1px;
     margin-bottom: -1px;
@@ -1626,8 +1649,21 @@ select {
     font-size: 1.875rem;
     line-height: 2.25rem;
   }
+
+  .sm\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 @media (min-width: 768px) {
+
+  .md\:col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+
+  .md\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
 
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
