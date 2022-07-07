@@ -20,7 +20,7 @@
         "laravel/breeze": "1.10.0",
         "laravel/sail": "1.15.0",
         "mockery/mockery": "1.5.0",
-        "nunomaduro/collision": "5.11.0",
+        "nunomaduro/collision": "6.2.1",
         "phpunit/phpunit": "9.5.21"
     },
     "autoload": {
